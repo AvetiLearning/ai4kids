@@ -76,7 +76,11 @@ const OrderSection = () => {
                         <div style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '44px', color: 'var(--color-secondary)', paddingTop: '10px' }}>
                             Custom Pricing
                         </div>
-                        <button className="btn btn-secondary" style={{ width: '100%' }}>
+                        <button
+                            className="btn btn-secondary"
+                            style={{ width: '100%' }}
+                            onClick={() => window.location.href = '#'}
+                        >
                             Contact Us
                         </button>
                     </motion.div>
