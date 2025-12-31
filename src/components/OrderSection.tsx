@@ -79,7 +79,7 @@ const OrderSection = () => {
                         <button
                             className="btn btn-secondary"
                             style={{ width: '100%' }}
-                            onClick={() => window.location.href = '#'}
+                            onClick={() => window.open('https://docs.google.com/forms/d/1Wn1rMAneJ-TNIaXn1Vn8-VNCV2MvAGO4TCmE4GvsHpE/viewform?edit_requested=true', '_blank')}
                         >
                             Contact Us
                         </button>

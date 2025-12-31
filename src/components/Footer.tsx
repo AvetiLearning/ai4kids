@@ -68,7 +68,7 @@ const Footer = () => {
                     opacity: 0.6,
                     fontSize: '0.9rem'
                 }}>
-                    &copy; {new Date().getFullYear()} AI for Kids Series. All rights reserved. Built with ❤️ in Odisha by <a href="https://avetilearning.com" target="_blank" rel="noopener noreferrer" style={{ color: 'white', fontWeight: 'bold' }}>Aveti Learning</a>.
+                    &copy; {new Date().getFullYear()} AI for Kids Series. All rights reserved. Built with ❤️ in Odisha by <a href="https://avetilearning.com/#/aboutus/labs" target="_blank" rel="noopener noreferrer" style={{ color: 'white', fontWeight: 'bold' }}>Aveti Learning</a>.
                 </div>
             </div>
         </footer>

@@ -16,19 +16,19 @@ const Navbar = () => {
 
     const scrollToSection = (id: string) => {
         setIsMobileMenuOpen(false);
-        const element = document.getElementById(id);
-        if (element) {
-            const offset = 80; // Adjust for fixed navbar height
-            const bodyRect = document.body.getBoundingClientRect().top;
-            const elementRect = element.getBoundingClientRect().top;
-            const elementPosition = elementRect - bodyRect;
-            const offsetPosition = elementPosition - offset;
+        setTimeout(() => {
+            const element = document.getElementById(id);
+            if (element) {
+                const offset = 80; // Adjust for fixed navbar height
+                const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+                const offsetPosition = elementPosition - offset;
 
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }, 100);
     };
 
     const navLinks = [
@@ -80,13 +80,8 @@ const Navbar = () => {
                     </motion.div>
 
                     {/* Desktop Menu */}
-                    <div className="desktop-menu" style={{ display: 'none', gap: '32px', alignItems: 'center' }}>
-                        <style>{`
-                            @media (min-width: 768px) {
-                                .desktop-menu { display: flex !important; }
-                                .mobile-menu-btn { display: none !important; }
-                            }
-                        `}</style>
+                    {/* Desktop Menu */}
+                    <div className="desktop-menu">
                         {navLinks.map((link) => (
                             <motion.button
                                 key={link.name}

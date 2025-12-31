@@ -122,3 +122,24 @@ button {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
 }
+
+/* Navbar Responsiveness */
+.mobile-menu-btn {
+  display: block;
+}
+
+.desktop-menu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: flex !important;
+    gap: 32px;
+    align-items: center;
+  }
+}
