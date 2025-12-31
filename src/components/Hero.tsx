@@ -153,24 +153,7 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Floating Element */}
-            <motion.div
-              animate={{ y: [-10, 10, -10] }}
-              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              style={{
-                position: 'absolute',
-                top: '-20px',
-                right: '-20px',
-                background: 'var(--color-accent)',
-                color: 'white',
-                padding: '16px',
-                borderRadius: 'var(--radius-md)',
-                boxShadow: 'var(--shadow-md)',
-                fontWeight: 'bold'
-              }}
-            >
-              For Ages 8-14 🚀
-            </motion.div>
+
           </motion.div>
 
         </div>
