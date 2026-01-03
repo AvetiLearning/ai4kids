@@ -244,11 +244,12 @@ const AnimatedVideos = () => {
                                 boxShadow: '0 20px 50px rgba(0,0,0,0.5)'
                             }}>
                                 <iframe
-                                    src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}?autoplay=1`}
+                                    src={`https://www.youtube-nocookie.com/embed/${selectedVideo.youtubeId}?autoplay=0&rel=0&modestbranding=1`}
                                     title={selectedVideo.title}
                                     frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     allowFullScreen
+                                    referrerPolicy="strict-origin-when-cross-origin"
                                     style={{
                                         position: 'absolute',
                                         top: 0,

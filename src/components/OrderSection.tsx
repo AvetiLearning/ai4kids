@@ -1,6 +1,7 @@
 import { Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
 import bookCover from '../assets/images/book_cover.png';
+import odiaBookCover from '../assets/images/odia_section.jpeg';
 
 const OrderSection = () => {
     const amazonLink = "https://www.amazon.in/AI-Kids-Prasanta-Behera/dp/1645606953";
@@ -17,6 +18,43 @@ const OrderSection = () => {
                     gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
                     gap: '30px'
                 }}>
+                    {/* Odia Version Book */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="card"
+                        style={{ textAlign: 'center', background: 'white', border: '2px solid transparent' }}
+                    >
+                        <div style={{ marginBottom: '24px', display: 'flex', justifyContent: 'center', height: '300px' }}>
+                            <img
+                                src={odiaBookCover}
+                                alt="AI for Kids Book Cover - Odia Version"
+                                style={{
+                                    height: '100%',
+                                    width: 'auto',
+                                    borderRadius: '8px',
+                                    boxShadow: 'var(--shadow-md)',
+                                    objectFit: 'contain'
+                                }}
+                            />
+                        </div>
+                        <h3 style={{ fontSize: '1.5rem', marginBottom: '16px' }}>ଏ.ଆଇ. - ପିଲାଙ୍କ ପାଇଁ</h3>
+                        <p style={{ color: 'var(--color-text-light)', marginBottom: '24px' }}>
+                            Perfect for getting started. Includes the complete story and activity sheets in Odia.
+                        </p>
+                        <div style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '32px', color: 'black' }}>
+                            ₹150
+                        </div>
+                        <button
+                            className="btn btn-primary"
+                            style={{ width: '100%' }}
+                            onClick={() => window.open(amazonLink, '_blank')}
+                        >
+                            Order Now
+                        </button>
+                    </motion.div>
+
                     {/* Individual Book */}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
