@@ -149,7 +149,7 @@ const Hero = () => {
                 color: 'var(--color-secondary)',
                 fontWeight: 'bold'
               }}>
-                Trusted by 50+ Schools in India
+                Donated <strong>more than 750 free</strong> copies to schools across Odisha
               </div>
             </div>
 

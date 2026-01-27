@@ -24,7 +24,7 @@ const AnimatedVideos = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [itemsPerPage, setItemsPerPage] = useState(3);
-    const [selectedVideo, setSelectedVideo] = useState<{ id: number; title: string; youtubeId: string | null } | null>(null);
+    const [selectedVideo, setSelectedVideo] = useState<{ id: number; title: string; desc: string; youtubeId: string | null } | null>(null);
 
     useEffect(() => {
         const handleResize = () => {
@@ -244,7 +244,7 @@ const AnimatedVideos = () => {
                                 boxShadow: '0 20px 50px rgba(0,0,0,0.5)'
                             }}>
                                 <iframe
-                                    src={`https://www.youtube-nocookie.com/embed/${selectedVideo.youtubeId}?autoplay=0&rel=0&modestbranding=1`}
+                                    src={selectedVideo.youtubeId ? `https://www.youtube-nocookie.com/embed/${selectedVideo.youtubeId}?autoplay=1&rel=0&modestbranding=1` : ''}
                                     title={selectedVideo.title}
                                     frameBorder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

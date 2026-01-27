@@ -24,7 +24,14 @@ const OrderSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         className="card"
-                        style={{ textAlign: 'center', background: 'white', border: '2px solid transparent' }}
+                        style={{
+                            textAlign: 'center',
+                            background: 'white',
+                            border: '2px solid transparent',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%'
+                        }}
                     >
                         <div style={{ marginBottom: '24px', display: 'flex', justifyContent: 'center', height: '300px' }}>
                             <img
@@ -48,7 +55,7 @@ const OrderSection = () => {
                         </div>
                         <button
                             className="btn btn-primary"
-                            style={{ width: '100%' }}
+                            style={{ width: '100%', marginTop: 'auto' }}
                             onClick={() => window.open(amazonLink, '_blank')}
                         >
                             Order Now
@@ -61,7 +68,14 @@ const OrderSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         className="card"
-                        style={{ textAlign: 'center', background: 'white', border: '2px solid transparent' }}
+                        style={{
+                            textAlign: 'center',
+                            background: 'white',
+                            border: '2px solid transparent',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%'
+                        }}
                     >
                         <div style={{ marginBottom: '24px', display: 'flex', justifyContent: 'center', height: '300px' }}>
                             <img
@@ -85,7 +99,7 @@ const OrderSection = () => {
                         </div>
                         <button
                             className="btn btn-primary"
-                            style={{ width: '100%' }}
+                            style={{ width: '100%', marginTop: 'auto' }}
                             onClick={() => window.open(amazonLink, '_blank')}
                         >
                             Order Now
@@ -102,7 +116,13 @@ const OrderSection = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
                         className="card"
-                        style={{ textAlign: 'center', background: 'white' }}
+                        style={{
+                            textAlign: 'center',
+                            background: 'white',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%'
+                        }}
                     >
                         <div style={{ marginBottom: '24px', display: 'flex', justifyContent: 'center' }}>
                             <Mail size={48} className="text-accent" />
@@ -116,7 +136,7 @@ const OrderSection = () => {
                         </div>
                         <button
                             className="btn btn-secondary"
-                            style={{ width: '100%' }}
+                            style={{ width: '100%', marginTop: 'auto' }}
                             onClick={() => window.open('https://docs.google.com/forms/d/1Wn1rMAneJ-TNIaXn1Vn8-VNCV2MvAGO4TCmE4GvsHpE/viewform?edit_requested=true', '_blank')}
                         >
                             Contact Us
