@@ -17,10 +17,11 @@ const PhotoCarousel = () => {
     const slides = [
         {
             id: 1,
-            title: "Govt Girls High School",
+            title: "Govt. Upper Primary School",
             description: "Jharsuguda",
-            image: govtGirlsImg
+            image: govtUpSchoolImg
         },
+
         {
             id: 2,
             title: "Ekal School",
@@ -57,11 +58,12 @@ const PhotoCarousel = () => {
             description: "Jharsuguda",
             image: townHighImg
         },
+
         {
             id: 8,
-            title: "Govt. Upper Primary School",
+            title: "Govt Girls High School",
             description: "Jharsuguda",
-            image: govtUpSchoolImg
+            image: govtGirlsImg
         }
     ];
 
