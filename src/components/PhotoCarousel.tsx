@@ -10,6 +10,7 @@ import lnCollegeImg from '../assets/images/LN College, Jharsuguda.jpg';
 import lnCollegeLibImg from '../assets/images/LN College, +2 Library.jpg';
 import womensCollegeImg from '../assets/images/Women’s college, Jharsuguda.jpg';
 import townHighImg from '../assets/images/Town High School, Jharsuguda.jpg';
+import govtUpSchoolImg from '../assets/images/Govt. Uper Primary School.jpg';
 
 const PhotoCarousel = () => {
     // School/College visits data
@@ -55,6 +56,12 @@ const PhotoCarousel = () => {
             title: "Town High School",
             description: "Jharsuguda",
             image: townHighImg
+        },
+        {
+            id: 8,
+            title: "Govt. Upper Primary School",
+            description: "Jharsuguda",
+            image: govtUpSchoolImg
         }
     ];
 
