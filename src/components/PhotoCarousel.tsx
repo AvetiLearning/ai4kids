@@ -13,15 +13,14 @@ import townHighImg from '../assets/images/Town High School, Jharsuguda.jpg';
 import govtUpSchoolImg from '../assets/images/Govt. Uper Primary School.jpg';
 
 const PhotoCarousel = () => {
-    // School/College visits data
-    const slides = [
+    // Original hardcoded slides for reference/fallback
+    const defaultSlides = [
         {
             id: 1,
             title: "Govt. Upper Primary School",
             description: "Jharsuguda",
             image: govtUpSchoolImg
         },
-
         {
             id: 2,
             title: "Ekal School",
@@ -58,7 +57,6 @@ const PhotoCarousel = () => {
             description: "Jharsuguda",
             image: townHighImg
         },
-
         {
             id: 8,
             title: "Govt Girls High School",
@@ -67,8 +65,12 @@ const PhotoCarousel = () => {
         }
     ];
 
+    // State for slides
+    const [slides] = useState(defaultSlides);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState(0);
+
+
 
     const slideVariants = {
         enter: (direction: number) => ({

@@ -1,8 +1,34 @@
+import { useState, useEffect } from 'react';
 import { Play, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import authorImg from '../assets/images/author.png';
 
 const Hero = () => {
+  const [content, setContent] = useState({
+    text: "Donated more than 750 free copies to schools across Odisha",
+    image: authorImg
+  });
+
+  useEffect(() => {
+    const fetchContent = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/content/hero_donation');
+        if (response.ok) {
+          const data = await response.json();
+          if (data.text_content || data.image_url) {
+            setContent({
+              text: data.text_content || content.text,
+              image: data.image_url ? `http://localhost:8000${data.image_url}` : content.image
+            });
+          }
+        }
+      } catch (error) {
+        console.error("Failed to fetch hero content", error);
+      }
+    };
+    fetchContent();
+  }, []);
+
   return (
     <section className="hero-section" style={{
       background: 'linear-gradient(135deg, var(--color-background) 0%, var(--color-background-alt) 100%)',
@@ -137,7 +163,7 @@ const Hero = () => {
                 overflow: 'hidden'
               }}>
                 <img
-                  src={authorImg}
+                  src={content.image}
                   alt="Kids learning AI"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
@@ -149,7 +175,16 @@ const Hero = () => {
                 color: 'var(--color-secondary)',
                 fontWeight: 'bold'
               }}>
-                Donated <strong>more than 750 free</strong> copies to schools across Odisha
+                {/* Check if content.text contains HTML tags or render strictly as text. 
+                     The original had <strong> tags. 
+                     For simplicity with dynamic text input (usually plain text), I will render as string.
+                     If user wants formatting, they might need a rich text editor or basic HTML parsing.
+                     I'll stick to bolding the whole thing or just text.
+                     Wait, original: Donated <strong>more than 750 free</strong> copies...
+                     The user asked for "give two option one for image and one for text".
+                     I'll just render the text as is.
+                  */}
+                <span dangerouslySetInnerHTML={{ __html: content.text }} />
               </div>
             </div>
 
